@@ -62,8 +62,8 @@ const steps = [
     content: `
       <h2 class="text-xl mb-3 font-bold text-center">🖊 A maioria das pessoas não tem um "rosto feio".<br>Elas só têm um rosto <span class="text-green font-bold">SEM ESTRUTURA</span>.</h2>
       <img src="images/7GG81-antes-depois-01.jpg" alt="Hoje vs Em 3 semanas" class="step-image">
-      <div class="info-box mt-3">
-        <p>Pequenos ajustes na postura da língua, musculatura do maxilar e hábitos faciais podem mudar <strong>drasticamente</strong> como seu rosto é percebido.</p>
+      <div class="info-box mt-3 text-center">
+        <p>Pequenos ajustes na postura da língua, musculatura do maxilar e hábitos faciais podem mudar <strong style="color: var(--green); font-weight: bold;">drasticamente</strong> como seu rosto é percebido.</p>
         <p class="mt-2 font-bold">Mesmo sem cirurgia ou procedimentos estéticos.</p>
       </div>
     `,
