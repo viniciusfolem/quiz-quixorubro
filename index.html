@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Looksmaxxing</title>
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Looksmaxxing">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Looksmaxxing">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '870053002590135');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=870053002590135&ev=PageView&noscript=1"/>
+  </noscript>
+</head>
+<body>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <div class="container" id="app">
+
+    <!-- Intro Hero -->
+    <div id="intro-screen">
+      <div class="intro-logo">
+        <img src="images/VXPAe-logo-prd.png" alt="Protocolo Rosto Definido">
+      </div>
+      <p class="intro-protocol-title">PROTOCOLO <span style="color: var(--green);">ROSTO DEFINIDO</span></p>
+      <div class="compare-wrapper" id="intro-compare">
+        <div class="compare-before">
+          <img src="images/DSRbt-antes-rosto.png" alt="Antes" id="intro-before-img">
+        </div>
+        <div class="compare-after" id="intro-after-div">
+          <img src="images/kXnBL-depois-rosto.png" alt="Depois" id="intro-after-img">
+        </div>
+        <div class="compare-handle" id="intro-handle">
+          <div class="compare-circle">◀ ▶</div>
+        </div>
+      </div>
+      <div class="compare-labels" style="margin-bottom:1.5rem;">
+        <span>ANTES</span><span>DEPOIS</span>
+      </div>
+      <h1 class="intro-headline">Descubra se você tem potencial para um <span style="text-decoration:underline">rosto mais definido</span></h1>
+      <p class="intro-sub">Responda 2 minutos de perguntas e receba seu plano personalizado gratuitamente.</p>
+      <button class="btn-primary" id="start-quiz-btn" onclick="startQuiz()">
+        Fazer meu diagnóstico grátis →
+      </button>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container" class="hidden">
+      <header>
+        <button id="back-btn" class="back-btn" aria-label="Voltar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="logo">
+          <img src="images/VXPAe-logo-prd.png" alt="Protocolo Rosto Definido">
+        </div>
+      </header>
+
+      <div id="content">
+        <!-- Dynamic content injected by quiz.js -->
+      </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="hidden loading-screen">
+      <h2 class="text-xl font-bold mb-4 text-center">Seu plano de 21 dias está sendo montado…</h2>
+
+      <div class="loader-header">
+        <span id="loading-text">Carregando...</span>
+        <span id="loading-pct">0%</span>
+      </div>
+      <div class="loader-bar-container">
+        <div class="loader-bar" id="loader-fill"></div>
+      </div>
+
+      <div class="review-cards">
+        <div class="review-card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <h4 class="review-title">Mudou minha autoestima</h4>
+          <p class="review-author">Gabriel Ferraz</p>
+          <p class="review-text">"Eu evitava tirar fotos porque não gostava do meu rosto. Depois do protocolo, meu maxilar ficou marcado e meu rosto muito mais definido."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <h4 class="review-title">Resultados desde a primeira semana</h4>
+          <p class="review-author">Bruno Garcia</p>
+          <p class="review-text">"Logo na primeira semana já notei redução do inchaço. Continuei seguindo o protocolo direitinho e agora tenho o rosto que sempre quis. Muito satisfeito com os resultados!"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sales Page -->
+    <div id="sales-page" class="hidden sales-page">
+
+      <!-- Logo -->
+      <img src="images/VXPAe-logo-prd.png" alt="Protocolo Rosto Definido" class="sales-logo">
+
+      <!-- Hero -->
+      <div class="sales-hero">
+        <img src="images/kXnBL-depois-rosto.png" alt="Resultado" class="hero-img">
+        <h1>Elimine a Retenção Facial e tenha um Rosto Definido em apenas <span style="text-decoration:underline">21 dias</span></h1>
+        <p class="mt-4 text-gray-500">Baseado nas suas respostas, você tem alto potencial de definição.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Before/After Compare Sliders -->
+      <p class="section-title">Resultados reais de quem seguiu o protocolo</p>
+
+      <!-- Resultado 1 -->
+      <img src="images/7GG81-antes-depois-01.jpg" class="result-img" alt="Resultado 1">
+
+      <!-- Resultado 2 -->
+      <img src="images/K6qRJ-antes-depois-02.jpg" class="result-img" alt="Resultado 2">
+
+      <!-- Resultado 3 -->
+      <img src="images/IWZpl-antes-depois-03.png" class="result-img" alt="Resultado 3">
+
+      <!-- Resultado 4 -->
+      <img src="images/5oPhm-antes-depois-04.jpg" class="result-img" alt="Resultado 4" style="margin-bottom:2rem;">
+
+      <div class="divider"></div>
+
+      <!-- Arguments -->
+      <div class="arguments-section">
+        <p class="section-title">Por que o Protocolo Rosto Definido funciona?</p>
+        <img src="images/13V5l-argumentos-1.jpg" alt="Argumento 1">
+        <img src="images/IiF7f-argumentos-2.jpg" alt="Argumento 2">
+        <img src="images/Ap7i9-argumentos-3.jpg" alt="Argumento 3">
+        <img src="images/AqrzV-argumentos-4.jpg" alt="Argumento 4">
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Offer Card -->
+      <div class="offer-card">
+        <h2>Protocolo Rosto Definido (PRD21)</h2>
+        <ul class="offer-list">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04aa6d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Guia completo de 21 dias com exercícios faciais
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04aa6d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Técnicas de Mewing corretas (passo a passo)
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04aa6d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Exercícios de respiração e postura
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04aa6d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Protocolo de redução de papada
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#04aa6d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Acesso imediato após a compra
+          </li>
+        </ul>
+
+        <!-- Bonus -->
+        <div class="bonus-section">
+          <p class="bonus-title">🎁 Bônus incluídos</p>
+          <div class="bonus-grid">
+            <div class="bonus-item"><img src="images/zhRQX-bonus-01.jpg" alt="Bônus 1"></div>
+            <div class="bonus-item"><img src="images/hkqyg-bonus-02.jpg" alt="Bônus 2"></div>
+            <div class="bonus-item"><img src="images/5uQgD-bonus-03.jpg" alt="Bônus 3"></div>
+            <div class="bonus-item"><img src="images/L03sj-bonus-04.jpg" alt="Bônus 4"></div>
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="price-block">
+          <div class="price-old">De R$ 147,00</div>
+          <div class="price-new">R$ 29,90</div>
+          <div class="price-installment">ou 3x de R$ 10,63 sem juros</div>
+        </div>
+
+        <!-- CTA -->
+        <button onclick="window.location.href='https://payfast.greenn.com.br/tu67a99'" class="btn-cta">
+          QUERO MEU PROTOCOLO AGORA
+        </button>
+        <p class="secure-text">🔒 Compra 100% segura • Acesso imediato</p>
+      </div>
+
+      <!-- Guarantee -->
+      <div class="guarantee-section">
+        <img src="images/IAxfL-garantia-7-dias.png" alt="Garantia de 7 dias">
+        <p class="text-sm text-gray-500">Garantia incondicional de 7 dias. Se não gostar, devolvemos 100% do seu dinheiro.</p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq">
+        <h3 class="font-bold mb-4">Perguntas Frequentes</h3>
+        <details>
+          <summary>Funciona para qualquer idade?</summary>
+          <p>Sim, a estimulação muscular e os exercícios faciais funcionam em qualquer idade, embora resultados ósseos sejam mais rápidos em jovens.</p>
+        </details>
+        <details>
+          <summary>Preciso de equipamentos?</summary>
+          <p>Não, apenas o guia e seus próprios músculos faciais. Tudo pode ser feito em casa, a qualquer hora.</p>
+        </details>
+        <details>
+          <summary>Em quanto tempo vejo resultados?</summary>
+          <p>A maioria dos alunos relata mudanças visíveis entre 2 a 4 semanas seguindo o protocolo diariamente.</p>
+        </details>
+        <details>
+          <summary>Como recebo o acesso?</summary>
+          <p>Imediatamente após a compra, você recebe um e-mail com o link de acesso ao material completo.</p>
+        </details>
+      </div>
+
+    </div><!-- /sales-page -->
+
+  </div><!-- /container -->
+
+  <script src="quiz.js"></script>
+</body>
+</html>
