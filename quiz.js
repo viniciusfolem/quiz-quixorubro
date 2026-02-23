@@ -61,7 +61,7 @@ const steps = [
     type: 'info',
     content: `
       <h2 class="text-xl mb-3 font-bold text-center">🖊 A maioria das pessoas não tem um "rosto feio".<br>Elas só têm um rosto <span class="text-green font-bold">SEM ESTRUTURA</span>.</h2>
-      <img src="images/7GG81-antes-depois-01.jpg" alt="Hoje vs Em 3 semanas" class="step-image">
+      <img src="images/7GG81-antes-depois-01.jpg" alt="Hoje vs Em 3 semanas" class="step-image" style="margin-top: 20px;">
       <div class="info-box mt-3 text-center">
         <p>Pequenos ajustes na postura da língua, musculatura do maxilar e hábitos faciais podem mudar <strong style="color: var(--green); font-weight: bold;">drasticamente</strong> como seu rosto é percebido.</p>
         <p class="mt-2 font-bold">Mesmo sem cirurgia ou procedimentos estéticos.</p>
@@ -107,11 +107,11 @@ const steps = [
   {
     type: 'info',
     content: `
-      <h2 class="text-xl mb-3 font-bold text-center">🍎 Seu rosto é moldável</h2>
+      <h2 class="text-xl font-bold text-center" style="margin-bottom: 25px;">🍎 Seu rosto é moldável</h2>
+      <p class="mb-3 text-center">A posição da língua, tensão muscular facial e respiração nasal moldam a estrutura do rosto ao longo do tempo.</p>
+      <p class="text-center" style="margin-bottom: 20px;"><strong>O problema é que ninguém te ensina sobre isso.</strong></p>
       <img src="images/ksnsV-rosto-moldavel-quiz.jpg" alt="Rosto moldável" class="step-image">
-      <p class="mb-3">A posição da língua, tensão muscular facial e respiração nasal moldam a estrutura do rosto ao longo do tempo.</p>
-      <p class="font-bold mb-3">O problema é que ninguém te ensina sobre isso.</p>
-      <div class="info-box">
+      <div class="info-box" style="text-align: center;">
         <p>Mas a boa notícia é que <strong>com os exercícios faciais corretos</strong>, e apenas <strong>10min por dia</strong>, você já pode melhorar isso em 3 semanas.</p>
       </div>
     `,
@@ -130,7 +130,7 @@ const steps = [
   // Step 12: Feeling
   {
     type: 'single',
-    question: 'Se seu rosto estivesse <span class="text-green">mais definido</span>, você se sentiria:',
+    question: 'Se seu rosto estivesse<br><span class="text-green">mais definido</span>, você se sentiria:',
     options: [
       { text: 'Mais confiante', value: 'confiante' },
       { text: 'Mais atraente', value: 'atraente' },
@@ -141,7 +141,7 @@ const steps = [
   // Step 13: Time
   {
     type: 'single',
-    question: 'Quanto tempo por dia você consegue se dedicar?',
+    question: 'Quanto tempo por dia<br>você consegue se dedicar?',
     options: [
       { text: '5 minutos', value: '5min' },
       { text: '10 minutos', value: '10min' },
